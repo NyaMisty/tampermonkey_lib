@@ -57,7 +57,7 @@ var XHRHook = {
                     if (!this.url) {}
                     else if (this.readyState == 4) {
                         xhrdbg("[XHRHook] StateChangeFinish: " + this.url)
-                        var response = XHRHook.rewriteResp(this.url, (this.responseType === 'text' || this.responseType === '') ? this.responseText : this.response)
+                        var response = XHRHook.rewriteResp(this.url, this, (this.responseType === 'text' || this.responseType === '') ? this.responseText : this.response)
                         if (response !== undefined) {
                             xhrdbg("[XHRHook] StateChangeFinish-Rewrite resp: " + response)
                             Object.defineProperty(this, 'response', {writable: true});
