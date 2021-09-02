@@ -12,7 +12,7 @@ var XHRHook = {
         var hookXHR = function() {
             var oldOpen, oldSend, i, xhrdbg;
             if (XHRHook.isdebug) {
-                xhrdbg = () => console.log.apply(this, arguments)
+                xhrdbg = function() {console.log.apply(this, arguments)}
             } else {
                 xhrdbg = () => {}
             }

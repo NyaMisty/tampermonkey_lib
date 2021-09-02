@@ -1,3 +1,4 @@
+// from https://gist.github.com/archan937/1961799
 var GMHelpers = {
     toSource_: function(object) {
         switch (typeof(object)) {
